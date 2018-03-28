@@ -1,0 +1,273 @@
+/*
+Theme Name: Faridabad24X7
+Theme URI: http://jspwebsolutions.com
+Author: the WordPress team
+Author URI: http://jspwebsolutions.com
+Description: The 2013 theme for WordPress takes us back to the blog, featuring a full range of post formats, each displayed beautifully in their own unique way. Design details abound, starting with a vibrant color scheme and matching header images, beautiful typography and icons, and a flexible layout that looks great on any device, big or small.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, translation-ready
+Text Domain: jspwebsolutions
+*/
+/* stylelint-disable selector-list-comma-newline-after */
+
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Raleway:300,400,500,800');
+header {
+    box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+}
+
+.start-end {
+    justify-content: flex-end
+}
+
+.top-nav {
+    background: #f4f4f4;
+    /* #14b1bb */
+}
+
+.smm-bx {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.logo,
+.logo:hover,
+.logo.active,
+.logo:focus {
+    font-family: 'Berkshire Swash', cursive;
+    color: #ff793e;
+    font-size: 30px;
+    transition: all 0.3s ease-in-out;
+    padding: 15px 10px;
+}
+
+.logo:hover,
+.logo.active,
+.logo:focus {
+    transform: scale(1.01, 1.01);
+}
+
+.logo>span,
+logo>span:hover {
+    display: inline-block;
+    color: #53504a;
+}
+
+.smm-bx li {
+    list-style: none;
+}
+
+.smm-bx a {
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.smm-bx a:hover,
+.smm-bx a:focus,
+.smm-bx a.active {
+    background: rgba(255, 255, 255, 0.9)
+}
+
+.menu-bx {
+    background: #fff;
+    padding: 0;
+}
+
+.menu-bx .navbar-nav .nav-link {
+    color: rgb(70, 69, 69);
+    padding: 25px 15px;
+    font-size: 16px;
+    font-weight: normal;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-bx .navbar-nav .nav-link:hover {
+    background: #ff793e;
+    color: #fff;
+}
+
+.menu-bx .navbar-toggler {
+    background: #ff793e;
+    top: 17px;
+    cursor: pointer;
+    right: 20px;
+}
+
+.contact-bx {
+    margin: 0;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.contact-bx li {
+    list-style: none;
+    margin-right: 10px;
+}
+
+.contact-bx li>a {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width:576px) {
+    .menu-bx .container {
+        margin: 0;
+    }
+    .smm-bx,
+    .contact-bx {
+        justify-content: center;
+    }
+    .contact-bx {
+        display: block;
+        text-align: center;
+    }
+}
+.blog-header {
+
+    line-height: 1;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .blog-header-logo {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2.25rem;
+  }
+  
+  .blog-header-logo:hover {
+    text-decoration: none;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  @media (min-width: 768px) {
+    .display-4 {
+      font-size: 3rem;
+    }
+  }
+  
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+  
+  .nav-scroller .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .nav-scroller .nav-link {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: .875rem;
+  }
+  
+  .card-img-right {
+    height: 100%;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .flex-auto {
+    -ms-flex: 0 0 auto;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+  }
+  
+  .h-250 { height: 250px; }
+  @media (min-width: 768px) {
+    .h-md-250 { height: 250px; }
+  }
+  
+  .border-top { border-top: 1px solid #e5e5e5; }
+  .border-bottom { border-bottom: 1px solid #e5e5e5; }
+  
+  .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+  
+  /*
+   * Blog name and description
+   */
+  .blog-title {
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .blog-description {
+    font-size: 1.1rem;
+    color: #999;
+  }
+  
+  @media (min-width: 40em) {
+    .blog-title {
+      font-size: 3.5rem;
+    }
+  }
+  
+  /* Pagination */
+  .blog-pagination {
+    margin-bottom: 4rem;
+  }
+  .blog-pagination > .btn {
+    border-radius: 2rem;
+  }
+  
+  /*
+   * Blog posts
+   */
+  .blog-post {
+    margin-bottom: 4rem;
+  }
+  .blog-post-title {
+    margin-bottom: .25rem;
+    font-size: 2.5rem;
+  }
+  .blog-post-meta {
+    margin-bottom: 1.25rem;
+    color: #999;
+  }
+  .img{
+      width:100%;
+      height:400px;
+  }
+  
+  /*
+  
+   * Footer
+   */
+  .blog-footer {
+    padding: 2.5rem 0;
+    color: #999;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: .05rem solid #e5e5e5;
+  }
+  .blog-footer p:last-child {
+    margin-bottom: 0;
+  }
