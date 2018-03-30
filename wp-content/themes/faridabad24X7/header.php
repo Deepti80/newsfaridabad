@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="<?php bloginfo('description')?>">
     <meta name="author" content="">
-    <link rel="icon" href="<?php bloginfo('favicon.ico');?>">
+    <link rel="icon" href="favicon.ico">
      <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
@@ -72,27 +72,28 @@
       </div>
   </div>
   <!-- navbar -->
-  <nav class="navbar navbar-expand-md  ">
+  <nav class="navbar navbar-expand-md ">
       <div class="container">
           <a class="navbar-brand logo" href="#"> Faridabad<span>24x7</span> </a>
           <button class="navbar-toggler navbar-toggler-right bg-dark" type="button" data-toggle="collapse"  data-target="#collapsenavbar">
               <span class="navbar-toggler-icon"></span>
       </button> 
-      <div class="navbar-collapse collapse text-center" id="collapsenavbar">
-          <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                  <a href="" class="nav-link">Home</a>
-              </li>
-              <li class="nav-item">
-                      <a href="" class="nav-link">About Us</a>
-                  </li>
-                  <li class="nav-item">
-                          <a href="" class="nav-link ">Contact us</a>
-                      </li>
-                      
-          </ul>
-      </div>
-
-      </div>
+      <?php
+wp_nav_menu( array(
+    'theme_location'	=> 'primary',
+    'depth'				=> 1, // 1 = with dropdowns, 0 = no dropdowns.
+	'container'			=> 'div',
+	'container_class'	=> 'collapse navbar-collapse ',
+	'container_id'		=> 'bs-example-navbar-collapse-1',
+    'menu_class'		=> 'navbar-nav mr-auto nav justify-content-end text-right',
+    'fallback_cb'		=> 'WP_Bootstrap_Navwalker::fallback',
+    'walker'			=> new WP_Bootstrap_Navwalker()
+) );
+?>
+    </div>
   </nav>
+  <div class="banner">
+<img src="<?php bloginfo('content');?>"/>
+</div>    
+
   
