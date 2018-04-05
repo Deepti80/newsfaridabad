@@ -260,13 +260,14 @@ logo>span:hover {
     size:border-box;
   }
   .post-thumb img{
-    width: 200px;
+    width: 300px;
     height: 200px;
     margin-bottom:10px;
   }
-  aside.col-md-4 { float: right;
+  aside.col-md-4 { 
+    float: right;
 
-  margin-top: -1100px;
+  margin-top: -3500px;
     margin-right: -400px;}
 
   .comments{

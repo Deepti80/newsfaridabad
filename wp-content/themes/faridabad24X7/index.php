@@ -1,17 +1,26 @@
 
 <?php get_header() ?>
-
+<div class="container blog-header ">
+  <div class="row">
+  <div class="col-md-8 blog-head">
+  <h1 class="<?php the_content(); ?>"></h1>
+  </div>
+</div>
+</div>
+<h3 class="<?php the_title(); ?>"></h3>
     <main role="main" class="container">
+    <h3 class="<?php the_title(); ?>"></h3>
       <div class="row">
+      
         <div class="col-md-8 blog-main">
+          
         <?php if(have_posts()) : ?>
         <?php while(have_posts()) : the_post(); ?>
-          <h3 class="pb-3 mb-4 font-bold border-bottom" ><?php the_title(); ?>
-            
-          </h3>
+          
 
           <div class="blog-post">
-            <h2 class="blog-post-title">
+            <h2 class="<?php the_title(); ?>">
+              
             <a href="<?php the_permalink();?>" >
             <?php the_title(); ?></h2>
             </a>
@@ -25,16 +34,25 @@
             <div class="post-thumb">
               <?php the_post_thumbnail(); ?>
               </div>
+              
+              
             <?php endif; ?>  
               <?php the_content(); ?>
+              <hr>
             
               <?php endwhile; ?>
+              
               <?php else : ?>
             <p>
+              
                 <?php  __('no post found'); ?>
              </p>
+             <hr>
                 <?php endif; ?>
-        
+                <div class="col-md-4 blog-main">
+                <h2 class="<?php the_content(); ?> "></h2>
+              </div>
+           
       
           <nav class="blog-pagination">
             <a class="btn btn-outline-primary" href="#">Older</a>
