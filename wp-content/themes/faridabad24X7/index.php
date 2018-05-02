@@ -1,12 +1,24 @@
 
 <?php get_header() ?>
+<section class="showcase">
+             <div class="container">
+                 <h1>Blog Post </h1>
+                 
+             </div>
+</section>
+<style>
+    .showcase{
+        background:url(<?php echo get_theme_mod('showcase_image', get_bloginfo('template_url').'/image/banner_news.jpg');?> ) no-repeat center center;
+    }
+    </style>
+
 <div class="container blog-header ">
   <div class="row">
     <div class="col-md-9 blog-head">
-      <h3>Latest News</h3>
+      <h2 style="text-align:left; color:#428bca">Latest News</h2>
     </div>
-    <div class="col-md-3 blog-head">
-        <h3>Suggested Post</h3>
+    <div class="col-md-3 blog-head" >
+        <h2 style="text-align:center; background:#4388c3; font-color:#fff;">Suggested Post</h2>
     </div>
   </div>
 </div>
@@ -42,15 +54,15 @@
   <?php the_post_thumbnail('name-thumb'); ?></a>
 
 </div>    
-
-  
-              
-              
               </div>
               
+                          <?php endif; ?>
+                          
+                          <div>  
               
-            <?php endif; ?>  
+              <a href="<?php the_permalink()?>">
               <?php the_content(); ?>
+</div>
               <hr>
             
               <?php endwhile; ?>
@@ -62,31 +74,25 @@
              </p>
              <hr>
                 <?php endif; ?>
-                <div class="col-md-4 blog-main">
-                <h5 class="<?php the_content(); ?> "></h5>
-              </div>
-           
-      
           <nav class="blog-pagination">
             <a class="btn btn-outline-primary" href="#">Older</a>
             <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
           </nav>
 
         </div><!-- /.blog-main -->
-        <div class="wrapper">
+       <?php if(!is_front_page()) : ?>
         <aside class="col-md-4 blog-sidebar">
-          
           <?php if(is_active_sidebar('sidebar')): ?>
             <?php dynamic_sidebar('sidebar'); ?>
           <?php endif; ?>
-
-          
         </aside><!-- /.blog-sidebar -->
-        </div>
-
+  <?php endif; ?>
+  <style>
+    .box{
+      padding:0px;
+      border:#fff 0px solid;
+    }
+    </style>
       </div><!-- /.row -->
-
     </main><!-- /.container -->
-
-    
-<?php get_footer() ?>
+    <?php get_footer(); ?>
